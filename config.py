@@ -22,5 +22,5 @@ class config(object):
     MYSQL_USER = os.environ.get("MYSQL_USER") if os.environ.get("MYSQL_USER", None) is not None else mysqlInfo["mysql_user"]
     MYSQL_PASSWORD = os.environ.get("MYSQL_PASSWORD") if os.environ.get("MYSQL_PASSWORD", None) is not None else mysqlInfo["mysql_password"]
     MYSQL_DB = os.environ.get("MYSQL_DATABASE") if os.environ.get("MYSQL_DATABASE", None) is not None else mysqlInfo["mysql_db"]
-    SQLALCHEMY_DATABASE_URI = "mysql+pymysql://{}:{}@{}:{}/{}".format(MYSQL_USER, MYSQL_PASSWORD, MYSQL_HOST,
+    SQLALCHEMY_DATABASE_URI = "mysql+pymysql://{}:{}@{}:{}/{}?charset=utf8".format(MYSQL_USER, MYSQL_PASSWORD, MYSQL_HOST,
                                                                       MYSQL_PORT, MYSQL_DB)

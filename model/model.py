@@ -4,6 +4,7 @@ db = SQLAlchemy()
 
 class book(db.Model):
     __tablename__ = 'book'
+    __table_args__ = {'mysql_collate': 'utf8_general_ci'}
     id = db.Column(db.INTEGER, nullable=False, primary_key=True,autoincrement=True)
     name = db.Column(db.String(55),nullable=False)
     desc = db.Column(db.TEXT, nullable=True)

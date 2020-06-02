@@ -1,7 +1,6 @@
 from . import spider
-from flask import jsonify
+from flask import jsonify,request
 from app.spider.view import *
-
 def reformat(data=None, code=200, message=None):
     temp = {
         "code": 200,
@@ -18,4 +17,7 @@ def reformat(data=None, code=200, message=None):
 
 @spider.route("/spider/book",methods=["GET"])
 def IdownloadBook():
-    downloadBook()
+    book_name=request.args.get("book_name",None)
+    if book_name is not None:
+        result=downloadBook(book_name)
+    return reformat(data=True,code=200,message="爬取成功")

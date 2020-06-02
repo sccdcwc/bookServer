@@ -12,6 +12,7 @@ def create_app():
     db.init_app(app)
     db.app = app
     db.create_all()
+
     register_blueprint(app)
     return app
 
