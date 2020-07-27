@@ -1,3 +1,4 @@
+#/usr/bin/python3
 from . import spider
 from flask import jsonify,request
 from app.spider.view import *

@@ -1,3 +1,4 @@
+#/usr/bin/python3
 from spider.spiderUtil import searchbook,getbookinfo,getchapterinfo
 from model.model import book as bookModel
 from tool.mongoUtil import mongoUtil

@@ -18,3 +18,7 @@ class mongoUtil():
 
     def getConnect(self):
         return self.__conn
+
+if __name__ == '__main__':
+    pass
+    
